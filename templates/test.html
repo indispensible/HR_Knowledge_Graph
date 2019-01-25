@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+{#    <meta http-equiv="Access-Control-Allow-Origin" content="*">#}
+    <title>人力资源图谱</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/search.css">
+    <script type="text/javascript" src="/static/js/jquery/jquery-3.2.1.js"></script>
+    <style type="text/css">
+        #input_jobs{
+            /*输入框高度设置为40px, border占据2px，总高度为42px*/
+            width: 380px;
+            height: 40px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            outline: none;
+        }
+    </style>
+</head>
+<body style="background-color: #f3f3f3;margin: 0px;">
+    <input id="test" type="button" value="搜索一下" style="cursor:pointer">
+{#    <div class="container">#}
+{#        <h1 style="text-align: center;color: #293c55;">人力资源知识图谱</h1>#}
+{#        <form action="" class="parent">#}
+{#            <input id="input_detail" type="text" placeholder="目前支持岗位等搜相关信息">#}
+{#            <input id="input_jobs" type="text" style="display: none" placeholder="目前支持专业搜相关岗位">#}
+{#            <input id="search_something" type="button" value="搜索一下" style="cursor:pointer">#}
+{#            <button>搜索切换</button>#}
+{#        </form>#}
+{#        <input id="change" type="button" value="搜索切换" style="cursor:pointer;margin-left: 79.5%;margin-top: 2.8%;">#}
+{#    </div>#}
+{##}
+{#    <div style="padding-top: 50px;"></div>#}
+{##}
+{#    <div id="show_graph" style="border-top: 1px solid;width: 98%;height: 50vw;margin: 0 auto;">啊偶！数据正在加载中</div>#}
+{#    <div id="show_graph1" style="border-top: 1px solid;width: 98%;height: 48vw;margin: 0 auto;">啊偶！数据正在加载中</div>#}
+{#    <div id="show_graph2" style="border-top: 1px solid;width: 98%;height: 48vw;margin: 0 auto;">啊偶！数据正在加载中</div>#}
+
+    <div id="job1" style="border-top: 1px solid;width: 98%;margin: 0 auto;">
+        <h2 style="margin: 12px auto;text-align: center;">岗位</h2>
+        <p id="job"></p>
+    </div>
+    <div id="skill1" style="border-top: 1px solid;width: 98%;margin: 0 auto;">
+        <h2 style="margin: 12px auto;text-align: center;">技能</h2>
+        <p id="skill">
+            <span id="skill_1">1:TMS</span>
+            <span id="skill_2">2:逻辑推理</span>
+        </p>
+    </div>
+    <div id="voacational1" style="border-top: 1px solid;width: 98%;margin: 0 auto;">
+        <h2 style="margin: 12px auto;text-align: center;">业务</h2>
+        <p id="voacational">1:系统需求分析   2:航空公司货运系统操作   3:平台类系统产品项目   </p>
+    </div>
+    <div id="professional1" style="border-top: 1px solid;width: 98%;margin: 0 auto;">
+        <h2 style="margin: 12px auto;text-align: center;">专业</h2>
+        <p id="professional">1:载重平衡      2:asdsad年</p>
+    </div>
+    <div id="industry1" style="border-top: 1px solid;width: 98%;margin: 0 auto;">
+        <h2 style="margin: 12px auto;text-align: center;">行业</h2>
+        <p id="industry">1:aaaa   2:bbbb</p>
+    </div>
+    <div id="function1" style="border-top: 1px solid;width: 98%;margin: 0 auto;">
+        <h2 style="margin: 12px auto;text-align: center;">职能</h2>
+        <p id="function">1:cccc   2:dddd</p>
+    </div>
+    <div id="seniority1" style="border-top: 1px solid;width: 98%;margin: 0 auto;">
+        <h2 style="margin: 12px auto;text-align: center;">年限</h2>
+        <p id="seniority">1:2年   2:3年</p>
+    </div>
+    <div id="qualification1" style="border-top: 1px solid;width: 98%;margin: 0 auto;">
+        <h2 style="margin: 12px auto;text-align: center;">学历要求</h2>
+        <p id="qualification">1:eeee   2:ffff</p>
+    </div>
+    <div id="job_req" style="border-top: 1px solid;width: 98%;margin: 0 auto;">
+        <h2 style="margin: 12px auto;text-align: center;">岗位参考要求</h2>
+        <p id="job_req1"></p>
+    </div>
+    <div id="job_desc" style="border-top: 1px solid;width: 98%;margin: 0 auto;">
+        <h2 style="margin: 12px auto;text-align: center;">岗位参考描述</h2>
+        <p id="job_desc1"></p>
+    </div>
+
+    <script type="text/javascript" src="/static/js/echarts.min.js"></script>
+    <script>
+        $("span").click(function(e){
+            var id = $(this).text().split(":")[1]
+            alert(id)
+        })
+    </script>
+{#    <script type="text/javascript" src="/static/js/search_knowledge.js"></script>#}
+</body>
+</html>
